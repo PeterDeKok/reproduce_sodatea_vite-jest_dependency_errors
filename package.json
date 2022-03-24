@@ -1,0 +1,38 @@
+{
+    "name": "reproduce-sodatea-vite-jest-dependency-errors",
+    "sideEffects": false,
+    "private": true,
+    "files": [
+        "src/",
+        "lib/"
+    ],
+    "main": "./lib/reproduction.umd.js",
+    "module": "./lib/reproduction.es.js",
+    "exports": {
+        ".": {
+            "import": "./lib/reproduction.es.js",
+            "require": "./lib/reproduction.umd.js"
+        }
+    },
+    "version": "0.0.0",
+    "repository": "git@github.com:PeterDeKok/reproduce_sodatea_vite-jest_dependency_errors.git",
+    "author": {
+        "name": "Peter de Kok",
+        "email": "info@peterdekok.nl"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "test:unit": "vite-jest --no-cache"
+    },
+    "devDependencies": {
+        "@jest/globals": "^27.5.1",
+        "@types/jest": "^27.4.1",
+        "@types/node": "^17.0.23",
+        "jest": "^27.5.1",
+        "typescript": "^4.5.4",
+        "vite": "^2.8.0",
+        "vite-jest": "^0.1.4"
+    }
+}
